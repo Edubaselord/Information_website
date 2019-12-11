@@ -1,0 +1,83 @@
+s1-header
+s2-trio
+s3-image-of-the-week
+s4-about
+s5-people
+s6-landmarks
+s7-places
+s8-contact
+s9-footer
+s10-copyright
+-> section>aside>h1+h5
+s2-trio
+-> (img+aside>h2{xxx}+p>lorem)*3 -> Landmarks, People, Places
+s3-image-of-the-week
+-> h1{xxx}+img+p{xxx}
+s4-about
+img+h3+p
+Nigeria, officially the Federal Republic of Nigeria, is a country in West Africa, bordering Niger in the north, Chad in the northeast, Cameroon in the east, and Benin in the west. Its coast in the south is located on the Gulf of Guinea in the Atlantic Ocean. The federation comprises 36 states and 1 Federal Capital Territory, where the capital, Abuja, is located. The constitution defines Nigeria as a democratic secular state.
+
+Nigeria has been home to a number of ancient and indigenous kingdoms and states over the millennia. The modern state originated from British colonial rule beginning in the 19th century, and took its present territorial shape with the merging of the Southern Nigeria Protectorate and Northern Nigeria Protectorate in 1914. The British set up administrative and legal structures while practising indirect rule through traditional chiefdoms. Nigeria became a formally independent federation in 1960. It experienced a civil war from 1967 to 1970. It thereafter alternated between democratically elected civilian governments and military dictatorships until it achieved a stable democracy in 1999, with the 2011 presidential election considered the first to be reasonably free and fair.
+s5-landmarks
+h1{Landmarks}+img*16
+s6-people
+h1{People}+div.people-$*10
+s7-places
+h1{Places}+img*16
+s8-contact
+(aside>h1{Contact}+p{xxx})+p
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8070402.458553875!2d4.179021893825278!3d9.006500298749685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0baf7da48d0d%3A0x99a8fe4168c50bc8!2sNigeria!5e0!3m2!1sen!2sng!4v1575875319943!5m2!1sen!2sng" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+s9-footer
+aside*4
+1 -> h1{Nigeria}+p{xxx}+(i.fa.fa-xxx)*4
+2 -> h1{Menu}+ul>li{xxx}*8
+3 -> h1{Image Names}+ul>li{xxx}*8
+4 -> h1{Other Links}+ul>li{xxx}*8
+s10-copyright
+div>p
+=================
+SECTION BG COLORS
+=================
+s1-header 1e1109
+s2-trio fefaf7
+s3-image-of-the-week 26221f
+s4-about f0e9df
+s5-people fefaf7
+s6-landmarks 414046
+s7-places f0e9df
+s8-contact fefaf7
+s9-footer 414046
+s10-copyright 000
+
+======================
+ANIMATED SCROLL SCRIPT
+======================
+
+<script type="text/javascript">
+	
+$(document).ready(function(){
+		
+	$('a[href^="#"]').on('click',function (e) {
+		e.preventDefault();
+
+	    	
+		var target = this.hash,
+	    	
+		$target = $(target);
+
+	    	
+		$('html, body').stop().animate({
+	        	
+			'scrollTop': $target.offset().top
+	   	 
+		}, 900, 'swing', function () {
+	        
+			window.location.hash = target;
+	    	
+		});
+		
+	});
+	
+});
+
+</script>
